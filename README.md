@@ -28,7 +28,8 @@ liveOrDie = function (count, value) {
 	return res
 }
 
-function gol (cells) {
+function nextGen (cells) {
+  if (cells == '') return []'
 	var n = cells.length;
 	var m = cells[0].length;
 	var result = new Array(n);
@@ -42,6 +43,3 @@ function gol (cells) {
 	}
 	return result
 }
-
-var arr_test = [[0,0,0],[1,1,1],[1,0,0]];
-var arr_res  = [[0,1,0],[1,1,0],[1,0,0]];
