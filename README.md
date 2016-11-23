@@ -34,7 +34,7 @@ function nextGen (cells) {
 	var m = cells[0].length;
 	var result = new Array(n);
 	for (var i = 0; i < n; i++) {
-		result[i] = new Array(m)
+		result[i] = new Array(m).fill(0)
 	}
 	for (var i = 0; i < n; i++) {
 		for (var j = 0; j < n; j++) {
