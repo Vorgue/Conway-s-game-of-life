@@ -1,5 +1,4 @@
 # Conway-s-game-of-life
-
 Array.prototype.checkNeighbours = function (i,j,n,m) {
 	var count = 0;
 	console.log(this);
@@ -30,15 +29,18 @@ liveOrDie = function (count, value) {
 }
 
 function gol (cells) {
-	var res = cells.slice();
 	var n = cells.length;
 	var m = cells[0].length;
+	var result = new Array(n);
+	for (var i = 0; i < n; i++) {
+		result[i] = new Array(m)
+	}
 	for (var i = 0; i < n; i++) {
 		for (var j = 0; j < n; j++) {
-			res[i][j] = liveOrDie( cells.checkNeighbours(i,j,n,m) , cells[i][j] )
+			result[i][j] = liveOrDie( cells.checkNeighbours(i,j,n,m) , cells[i][j] )
 		}
 	}
-	return res
+	return result
 }
 
 var arr_test = [[0,0,0],[1,1,1],[1,0,0]];
