@@ -29,7 +29,7 @@ liveOrDie = function (count, value) {
 }
 
 function nextGen (cells) {
-  if (cells == '') return []'
+  if (cells == '') return [];
 	var n = cells.length;
 	var m = cells[0].length;
 	var result = new Array(n);
